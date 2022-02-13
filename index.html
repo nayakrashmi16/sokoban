@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="sokoban.css">
+</head>
+<body>
+<div class="homepage-canvas">
+    <div class="levels-btn homepage-levels-btn" onclick="showModal();generateLevelButtons()">Levels</div>
+    <div class="sokoban-headline">
+        <img src="resources/player.png" class="headline-img" alt="sokoban">
+        <span>Sokoban</span>
+    </div>
+    <div class="sokoban-instructions">
+        <p class="instructions-headline"><img src="resources/joystick.png" class="instruction-img joystick-img" alt="joystick">Instructions</p>
+        <p class="instruction">1. Use the <img src="resources/arrows.png" class="instruction-img arrow-img" alt="arrow-keys"> to move the player and push the box on to a goal square</p>
+        <p class="instruction">2. There is no undo option, hit the Restart button <img src="resources/refresh.png" class="instruction-img refresh-img" alt="refresh"> to restart a level</p>
+        <p class="instruction">3. Player can only push one box at a time, and cannot pull a box</p>
+        <p class="instruction">4. A level is completed when all boxes are on the goal squares</p>
+        <div class="legend-container">
+            <div class="legend"><img src="resources/player.png" class="legend-img" alt="player"><span> - Player</span></div>
+            <div class="legend"><img src="resources/box.png" class="legend-img" alt="box"><span> - Box</span></div>
+            <div class="legend"><img src="resources/goal-square.png" class="legend-img" alt="goal-square"><span> - Goal Square</span></div>
+            <div class="legend"><img src="resources/success-box.png" class="legend-img" alt="success-box"><span> - Box on Goal Square</span></div>
+        </div>
+    </div>
+    <div class="sokoban-start-btn-container">
+        <a href="sokoban.html" class="start-btn">Start</a>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <img src="resources/close.png" class="close-icon" onclick="hideModal()" alt="close-btn">
+            <div class="levels-headline"><img src="resources/level.png" class="levels-headline-icon" alt="levels">Levels</div>
+            <div class="levels-container" id="levels-container">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="sokoban.js"></script>
+</body>
+</html>

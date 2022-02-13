@@ -1,0 +1,159 @@
+@font-face {
+    font-family: Public Pixel;
+    src: url(resources/arcade-font/PublicPixel-0W6DP.ttf);
+}
+
+@font-face {
+    font-family: Josefin Sans;
+    src: url(resources/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+.sokoban-economy-container {
+    font-family: 'Public Pixel';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin: 25px 0;
+}
+
+.sokoban-title {
+    color: #b71800;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.sokoban-title-icon {
+    height: 25px;
+    margin-right: 5px;
+}
+
+.sokoban-canvas {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.sokoban-game {
+    position: relative;
+    width: fit-content;
+    background-color: #e0e0e0;
+    padding: 50px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+}
+.sokoban-element {
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    background-image: url("resources/floor.png");
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+}
+.sokoban-element-img {
+    height: 80px;
+}
+
+.modal {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(1,1,1,0.4);
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+.modal-content {
+    background-color: #6fc28a;
+    width: 500px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-family: 'Josefin Sans';
+    background-color: rgb(255, 255, 255);
+    color: #46464a;
+
+    position: relative;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.level-btn-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.level-btn {
+    text-decoration: none;
+    background-color: #b71800;
+    color: #ffffff;
+    font-family: 'Public Pixel';
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 10px;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.level-btn:hover {
+    transform: scale(0.98);
+    filter: brightness(0.98);
+}
+
+.level-btn:active {
+    transform: scale(0.95);
+    filter: brightness(0.95);
+}
+
+.level-btn-icon {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.restart-level-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.home-link {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.home-icon {
+    height: 25px;
+}
+
+.display-none {
+    display: none;
+}

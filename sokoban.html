@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sokoban</title>
+    <link rel="stylesheet" href="sokoban.css">
+</head>
+<body onload="addEventListenerForKeyPress()">
+<div class="sokoban-game">
+
+    <a href="index.html" class="home-link"><img src="resources/home.png" class="home-icon" alt="home-btn"></a>
+
+    <div class="sokoban-economy-container">
+        <div>Level:<span class="level-number"></span></div>
+        <div class="sokoban-title"><img src="resources/player.png" class="sokoban-title-icon" alt="player">Sokoban</div>
+        <div>Moves:<span class="moves"></span></div>
+    </div>
+
+    <div class="sokoban-canvas">
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            Woohoo! You cracked this level! 🥳
+            <div class="level-btn-container">
+                <div onclick="playLevel(-1)" class="level-btn" id="previous-level"><img src="resources/previous.png" class="level-btn-icon" alt="previous">Previous Level</div>
+                <div onclick="playLevel(0)" class="level-btn" id="current-level"><img src="resources/replay.png" class="level-btn-icon" alt="replay">Replay Level</div>
+                <div onclick="playLevel(1)" class="level-btn" id="next-level"><img src="resources/next.png" class="level-btn-icon" alt="next">Next Level</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="restart-level-btn-container">
+        <div class="level-btn" onclick="playLevel(0)"><img src="resources/replay.png" class="level-btn-icon" alt="replay">Restart Level</div>
+    </div>
+
+</div>
+<script src="sokoban.js"></script>
+</body>
+</html>
